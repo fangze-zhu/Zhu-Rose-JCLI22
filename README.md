@@ -6,7 +6,7 @@ This repository was developed for the paper:
 
 ## Cite this repository
 
-[![DOI:10.1101/2021.01.08.425840](http://img.shields.io/badge/DOI-10.1101/2021.01.08.425840-blue.svg)](https://doi.org/10.1101/2021.01.08.425840)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7438273.svg)](https://doi.org/10.5281/zenodo.7438273)
 
 ## Description
 

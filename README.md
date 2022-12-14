@@ -6,7 +6,7 @@ This repository was developed for the paper:
 
 ## Cite this repository
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7438273.svg)](https://doi.org/10.5281/zenodo.7438273)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7438501.svg)](https://doi.org/10.5281/zenodo.7438501)
 
 ## Description
 

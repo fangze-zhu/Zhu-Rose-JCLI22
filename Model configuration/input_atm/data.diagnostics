@@ -1,0 +1,114 @@
+# Diagnostic Package Choices
+#-----------------
+# for each output-stream:
+#  filename(n) : prefix of the output file name (only 8.c long) for outp.stream n
+#  frequency(n):< 0 : write snap-shot output every |frequency| seconds
+#               > 0 : write time-average output every frequency seconds
+#  timePhase(n)     : write at time = timePhase + multiple of |frequency|
+#  levels(:,n) : list of levels to write to file (Notes: declared as REAL)
+#                 when this entry is missing, select all common levels of this list
+#  fields(:,n) : list of diagnostics fields (8.c) (see "available_diagnostics" file
+#                 for the list of all available diag. in this particular config)
+#-----------------
+ &diagnostics_list
+
+  frequency(1) = 622080000.,
+   filename(1) = 'DiagAtmEta',
+   fields(1,1) = 'ETAN    ','ETANSQ  ',
+   averagingFreq(1) = 2592000.,
+   repeatCycle(1) = 12,
+
+  frequency(2) = 622080000.,
+   filename(2) = 'DiagAtmTave',
+   fields(1,2) = 'UVEL    ','VVEL    ','WVEL    ','THETA   ',
+                 'SALT    ','UVELTH  ','VVELTH  ','WVELTH  ',
+                 'UVELSLT ','VVELSLT ','WVELSLT ','PHIHYD  ',
+                 'UVELSQ  ','VVELSQ  ','UV_VEL_C','THETASQ ',
+   averagingFreq(2) = 2592000.,
+   repeatCycle(2) = 12,
+
+  frequency(3) = 622080000.,
+   filename(3) = 'DiagAtmExtra',
+   fields(1,3) = 'ADVx_TH ','ADVy_TH ','ADVr_TH','ADVx_SLT',
+                 'ADVy_SLT','ADVx_SLT','UVELPHI ','VVELPHI ',
+                 'momKE   ','ADVr_SLT','SHAP_dT ','RELHUM  ',
+                 'SHAP_dKE','SHAP_dS ','SHAP_dU ','SHAP_dV ',
+		 'TOTUTEND','TOTVTEND','TOTTTEND','TOTSTEND',
+		 'HeatDiss',
+   averagingFreq(3) = 2592000.,
+   repeatCycle(3) = 12,
+
+  frequency(4) = 622080000.,
+   filename(4) = 'DiagAim',
+   fields(1,4) = 'UFLUX   ','VFLUX   ','TSR     ','OLR     ',
+                 'RADSWG  ','RADLWG  ','HFLUX   ','EVAP    ',
+                 'PRECON  ','PRECLS  ','CLDFRC  ','CLDPRS  ',
+                 'CLDMAS  ','DRAG    ','WINDS   ','TS      ',
+                 'QS      ','ENPREC  ','ALBVISDF','DTSIMPL ',
+                 'dKE_Ustr','dKE_Vstr',
+   averagingFreq(4) = 2592000.,
+   repeatCycle(4) = 12,
+
+  frequency(5) = 622080000.,
+   filename(5) = 'DiagIce',
+   fields(1,5) = 'SI_Fract','SI_Thick','SI_SnowH','SI_Tsrf ',
+                 'SI_Tice1','SI_Tice2','SI_Qice1','SI_Qice2',
+                 'SIalbedo','SIsnwAge','SIsnwPrc','SIflx2oc',
+                 'SIfrw2oc','ADVxSIfr','ADVySIfr','ADVxSIhs',
+                 'ADVySIhs','ADVxSIhi','ADVySIhi','ADVxSIq1',
+                 'ADVySIq1','ADVxSIq2','ADVySIq2',
+   averagingFreq(5) = 2592000.,
+   repeatCycle(5) = 12,
+
+  frequency(6) =-622080000.,
+  timePhase(6) = 0.,
+   filename(6) = 'DiagAtmEtai',
+   fields(1,6) = 'RSURF   ',
+
+  frequency(7) =-622080000.,
+  timePhase(7) = 0.,
+   filename(7) = 'DiagAtmTHi',
+   fields(1,7) = 'THETA   ',
+
+  frequency(8) = 622080000.,
+   filename(8) = 'DiagLand3d',
+   fields(1,8) = 'GrdTemp ','GrdEnth ','GrdWater',
+   averagingFreq(8) = 2592000.,
+   repeatCycle(8) = 12,
+
+  frequency(9) = 622080000.,
+   filename(9) = 'DiagLand2d',
+   fields(1,9) = 'GrdSurfT','LdSnowH ','LdSnwAge','RUNOFF  ',
+                 'EnRunOff','landHFlx','landPmE ','ldEnFxPr',
+   averagingFreq(9) = 2592000.,
+   repeatCycle(9) = 12,
+
+   frequency(10) = 622080000.,
+   filename(10) = 'DiagAim3D',
+   fields(1,10) = 'DIABT   ','DIABQ   ','RADSW   ','RADLW   ',
+            'DTCONV  ','TURBT   ','DTLS    ','DQCONV  ',
+            'TURBQ   ','DQLS    ','SWCLR   ','LWCLR   ',
+	    'CLDCLW  '
+   averagingFreq(10) = 2592000.,
+   repeatCycle(10) = 12,
+
+# frequency(9) = 622080000.,
+#  filename(9) = 'DiagClimC',
+#  fields(1,9) = 'SI_Fract','SI_Thick',
+#averagingFreq(9) = 2592000.,
+#  repeatCycle(9) = 12,
+#  diag_mnc = .FALSE.,
+
+# frequency(10)=-86400.,
+#  filename(10)= 'DiagAtmPSI',
+#  fields(1,10)= 'UVELMASS','VVELMASS','THETA   ','SALT    ',
+#                'PHIHYD  ',
+ &
+
+ &DIAG_STATIS_PARMS
+ stat_fields(1,1)= 'aim_pCO2',
+    stat_fname(1)= 'pCO2StDiag',
+     stat_freq(1)=-2592000.,
+    stat_phase(1)= 0.,
+ &
+

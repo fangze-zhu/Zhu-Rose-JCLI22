@@ -184,7 +184,7 @@ if [ $iitO -ge $fitO ]; then
 elif [ $iitA -ge $fitA ]; then
     echo "New iitA exceeds fitA;  All done!" >> cplmonitor; 
 else
-    sbatch $DIR/Run_model; fi
+    sbatch $DIR/Run_model.sh; fi
 
 
 THEDATE=`date`

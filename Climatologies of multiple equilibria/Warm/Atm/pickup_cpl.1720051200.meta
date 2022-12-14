@@ -1,0 +1,13 @@
+ nDims = [   2 ];
+ dimList = [
+   144,    1,  144,
+    24,    1,   24
+ ];
+ dataprec = [ 'float64' ];
+ nrecords = [    10 ];
+ timeStepNumber = [ 1720051200 ];
+ timeInterval = [  2.064061440000E+12 ];
+ nFlds = [   10 ];
+ fldList = {
+ 'qHeatFlx' 'qShortW ' 'surfTauX' 'surfTauY' 'Evp-Prec' 'RunOffFx' 'RnOfEnFx' 'saltFlux' 'atm-CO2 ' 'wndSpeed'
+ };

@@ -2,7 +2,7 @@
 
 This repository was developed for the paper:
 
-**Zhu, F. and B.E.J. Rose. (2022). Multiple Equilibria in a Coupled Climate-Carbon Model. _Journal of Climate_. [DOI: 10.1175/JCLI-D-21-0984.1](https://doi.org/10.1175/JCLI-D-21-0984.1)**
+**Zhu, F. and [B.E.J. Rose](https://github.com/brian-rose). (2022). Multiple Equilibria in a Coupled Climate-Carbon Model. _Journal of Climate_. [DOI: 10.1175/JCLI-D-21-0984.1](https://doi.org/10.1175/JCLI-D-21-0984.1)**
 
 ## Cite this repository
 
